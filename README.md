@@ -13,7 +13,6 @@ Votre tâche est de compléter le fichier `server.js` en remplissant les routes 
 - envoyer des données JSON,
 - gérer les paramètres d’URL,
 - modifier, ajouter et supprimer des données,
-- gérer les statuts HTTP et les erreurs.
 
 ---
 
@@ -23,7 +22,7 @@ Votre tâche est de compléter le fichier `server.js` en remplissant les routes 
 - Le fichier principal est `server.js` : complétez les routes indiquées.
 - Le serveur écoute sur le port 3000.
 - Utilisez `fs.writeFileSync` pour sauvegarder les modifications dans les fichiers JSON.
-- N’oubliez pas de gérer les erreurs et de renvoyer des codes HTTP adaptés (200, 201, 204, 400, 404, 500…).
+
 
 ---
 
@@ -53,7 +52,7 @@ Votre tâche est de compléter le fichier `server.js` en remplissant les routes 
 - Récupérer l’id passé dans l’URL.
 - Chercher le film correspondant dans la liste.
 - Renvoyer le film en JSON.
-- Si aucun film n’est trouvé, renvoyer un status 404 et un message `Film non trouvé`.
+- Bonus : Si aucun film n’est trouvé, renvoyer un status 404 et un message `Film non trouvé`.
 
 ---
 
@@ -64,7 +63,7 @@ Votre tâche est de compléter le fichier `server.js` en remplissant les routes 
 - Supprimer le film de la liste avec `splice`.
 - Sauvegarder le fichier JSON.
 - Renvoyer un status 204 (No Content).
-- En cas d’erreur ou si le film n’existe pas, gérer avec un message et un code HTTP adapté.
+- Bonus : En cas d’erreur ou si le film n’existe pas, gérer avec un message et un code HTTP adapté.
 
 ---
 
@@ -75,7 +74,7 @@ Votre tâche est de compléter le fichier `server.js` en remplissant les routes 
 - Ajouter le film dans la liste.
 - Sauvegarder dans le fichier JSON.
 - Renvoyer un status 201 avec un message et l’objet créé.
-- En cas d’erreur lors de la sauvegarde, renvoyer 500.
+- Bonus : En cas d’erreur lors de la sauvegarde, renvoyer 500.
 
 ---
 
@@ -86,7 +85,6 @@ Votre tâche est de compléter le fichier `server.js` en remplissant les routes 
 - Sauvegarder les changements.
 - Renvoyer un status 201 avec message et l’objet modifié.
 - Vérifier que le body n’est pas vide.
-- Gérer les erreurs.
 
 ---
 
