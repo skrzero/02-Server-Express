@@ -49,12 +49,19 @@ app.get('/films/:id', (req,res)=>{
     //HINT : 3. Utiliser la méthode fs.writeFileSync(dataPath, JSON.stringify(films)); pour enregistrer le résultat
     //HINT : 4. Renvoyer un status code 204('No content') et un res.end()
     //BONUS : vérifier que le film existe bien avant de le supprimer
+
+const pathFilm = path.join(__dirname,"./data/films.json"); 
 app.delete('/films/:id', (req,res)=>{
 const id = parseInt(req.params.id);
-const film = films.find(f => f.id === id);
-film.splice(0,1);
-fs.writeFileSync(pathToFile, JSON.stringify(films));
-res.statut(200,'ok');
+const index = films.findIndex(film => film.id === id);
+if (index === -1) {
+    return res.status(404).json({ error: 'Film non trouvé' });
+  };
+films.splice(index,1);
+console.log(films.length);
+fs.writeFileSync(pathFilm,JSON.stringify(films),'utf8');
+res.status(204)
+res.end();
 });
 
 
